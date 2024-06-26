@@ -45,15 +45,15 @@ const Tabs = ({ tabs, content }: TabsProps) => {
       {/* Tabs */}
       <div className="flex border-b border-gray-200">
         <div className="w-full h-16 bg-white border-b-2 px-4 md:px-24 flex items-center gap-2 md:gap-14 overflow-x-scroll md:overflow-hidden">
-          {tabs.map((tab, index) => (
+          {tabs.map((tab, uni) => (
             <div
               className="min-w-32 h-full flex justify-center items-center flex-col cursor-pointer"
-              onClick={() => setActiveTab(index)}
-              key={index}
+              onClick={() => setActiveTab(uni)}
+              key={uni}
             >
               <span
                 className={`h-full flex justify-center items-center ${
-                  activeTab === index
+                  activeTab === uni
                     ? "text-clade-primary font-semibold"
                     : "text-clade-text-gray"
                 }`}
@@ -62,7 +62,7 @@ const Tabs = ({ tabs, content }: TabsProps) => {
               </span>
               <div
                 className={`w-12 h-[2px] ${
-                  activeTab === index ? "bg-clade-primary" : "bg-transparent"
+                  activeTab === uni ? "bg-clade-primary" : "bg-transparent"
                 }`}
               ></div>
             </div>
@@ -89,10 +89,10 @@ const Tabs = ({ tabs, content }: TabsProps) => {
               </button>
             </div>
             <div className="w-full mt-8 flex flex-col gap-3">
-              {sideMenuItem.map((item, index) => (
+              {sideMenuItem.map((item, uni) => (
                 <>
                   <div
-                    key={index}
+                    key={uni}
                     className="flex justify-between items-center py-2 px-3"
                   >
                     <div className="flex items-center gap-3">
@@ -101,7 +101,7 @@ const Tabs = ({ tabs, content }: TabsProps) => {
                     </div>
                     <span className="font-bold text-black">{item.stats}</span>
                   </div>
-                  {index === sideMenuItem.length - 1 ? null : (
+                  {uni === sideMenuItem.length - 1 ? null : (
                     <hr className="border" />
                   )}
                 </>
