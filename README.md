@@ -1,7 +1,7 @@
 # TechKareer x Clade Frontend Assignment
 
 This repository contains my submission for the frontend assignment for TechKareer x Clade.
-Live Link: [Click Here](https://www.itsharshag.com/)
+# Live Link: [Click Here](https://techkareer-lokesh.vercel.app/)
 ## Project Overview
 
 Clade, a Venture Studio, is looking for frontend engineers to work on one of their upcoming products in the recruitment space.
