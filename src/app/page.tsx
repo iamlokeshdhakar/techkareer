@@ -5,7 +5,7 @@ import Messages from "@/components/tabs/Messages"
 import Tabs from "@/components/ui/Tab"
 
 const tabs = ["Job preview", "Applicants", "Match", "Messages"]
-const content = ["hello", <Applicants />, <Matches />, <Messages />]
+const content = [<JobPreview />, <Applicants />, <Matches />, <Messages />]
 export default function Home() {
   return (
     <div className="min-h-screen w-full bg-white">

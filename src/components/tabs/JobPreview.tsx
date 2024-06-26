@@ -12,7 +12,7 @@ const JobPreview = () => {
   return (
     <div className="w-full">
       <div className="flex flex-col gap-7 border-b-2 border-clade-gray px-4 md:pl-24 py-16">
-        <div className="flex flex-col md:flex-row md:items-center gap-6 ">
+        <div className="flex flex-col lg:flex-row lg:items-center gap-6 ">
           <h1 className="text-4xl font-bold text-[#3D3D3D]">
             Senior Product Designer
           </h1>
