@@ -8,11 +8,10 @@ import {
   Users,
 } from "lucide-react"
 import React, { useState } from "react"
-
-interface TabsProps {
-  tabs: any[]
-  content: any[]
-}
+import JobPreview from "../tabs/JobPreview"
+import Applicants from "../tabs/Applicants"
+import Matches from "../tabs/Matches"
+import Messages from "../tabs/Messages"
 
 const sideMenuItem = [
   {
@@ -36,8 +35,11 @@ const sideMenuItem = [
     stats: "800",
   },
 ]
+const tabs = ["Job preview", "Applicants", "Match", "Messages"]
+// eslint-disable-next-line
+const content = [<JobPreview />, <Applicants />, <Matches />, <Messages />]
 
-const Tabs = ({ tabs, content }: TabsProps) => {
+const Tabs = () => {
   const [activeTab, setActiveTab] = useState(0)
 
   return (
@@ -47,9 +49,9 @@ const Tabs = ({ tabs, content }: TabsProps) => {
         <div className="w-full h-16 bg-white border-b-2 px-4 md:px-24 flex items-center gap-2 md:gap-14 overflow-x-scroll md:overflow-hidden">
           {tabs.map((tab, uni) => (
             <div
+              key={uni}
               className="min-w-32 h-full flex justify-center items-center flex-col cursor-pointer"
               onClick={() => setActiveTab(uni)}
-              key={uni}
             >
               <span
                 className={`h-full flex justify-center items-center ${
