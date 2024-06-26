@@ -41,7 +41,7 @@ const JobPreview = () => {
       <div className="flex flex-wrap gap-12 border-b-2 border-clade-gray px-4 md:pl-24 py-10">
         <div className="flex flex-col gap-2 md:w-52">
           <span className="text-[14px]">Skill Required</span>
-          <div className="flex md:flex-col gap-2">
+          <div className="flex flex-wrap sm:flex-nowrap md:flex-col gap-2">
             {jobData.skills.map((skill, index) => (
               <div
                 key={index}
@@ -73,7 +73,7 @@ const JobPreview = () => {
           <span className="text-black font-medium">3+ Years of Experience</span>
         </div>
       </div>
-      {/* <div className="flex flex-col gap-4 border-b-2 border-clade-gray pl-24 py-10 text-black font-medium">
+      <div className="flex flex-col gap-4 border-b-2 border-clade-gray px-4 md:pl-24 py-10 text-black font-medium">
         <h4 className="font-medium text-lg text-[#6E6D6D]">About the job</h4>
         <ol className="list-decimal pl-4">
           <li> Handle the UI/UX research design</li>
@@ -107,7 +107,7 @@ const JobPreview = () => {
         </div>
         <h4>Work Location: In Person</h4>
       </div>
-      <div className="flex flex-col gap-7 border-b-2 border-clade-gray pl-24 py-10">
+      <div className="flex flex-col gap-7 border-b-2 border-clade-gray px-4 md:pl-24 py-10">
         <div className="w-full flex items-center">
           <div className="flex items-center justify-center  gap-2">
             <div className="relative w-12 h-12">
@@ -121,7 +121,7 @@ const JobPreview = () => {
             <span className="font-medium text-xl">Atlassian</span>
           </div>
         </div>
-        <div className="w-full flex">
+        <div className="w-full flex flex-wrap sm:flex-nowrap">
           <div className="w-1/2 flex flex-col gap-8">
             <div className="flex flex-col gap-2">
               <span className="text-[14px]">Company size</span>
@@ -155,7 +155,7 @@ const JobPreview = () => {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }
