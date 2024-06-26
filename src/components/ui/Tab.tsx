@@ -42,11 +42,12 @@ const Tabs = ({ tabs, content }: TabsProps) => {
 
   return (
     <div className="w-full">
+      {/* Tabs */}
       <div className="flex border-b border-gray-200">
-        <div className="w-full h-16 bg-white border-y-2 px-24 flex items-center gap-14">
+        <div className="w-full h-16 bg-white border-b-2 px-4 md:px-24 flex items-center gap-2 md:gap-14 overflow-x-scroll md:overflow-hidden">
           {tabs.map((tab, index) => (
             <div
-              className="min-w-12 h-full flex justify-center items-center flex-col cursor-pointer"
+              className="min-w-32 h-full flex justify-center items-center flex-col cursor-pointer"
               onClick={() => setActiveTab(index)}
             >
               <span
@@ -67,18 +68,21 @@ const Tabs = ({ tabs, content }: TabsProps) => {
           ))}
         </div>
       </div>
-      <div className="w-full min-h-screen pl-24 flex text-[#4F4F4F]">
-        <div className="w-full h-screen border-r-2 border-clade-gray  py-8">
+
+      {/* Content */}
+      <div className="w-full min-h-screen flex flex-col md:flex-row text-[#4F4F4F]">
+        <div className="border-r-2 border-clade-gray w-full">
           {content[activeTab]}
         </div>
-        <div className="w-[400px] flex-shrink-0 h-screen border-l-2 border-clade-gray px-8">
+        {/* Right Siderbar */}
+        <div className="flex-shrink-0 px-8">
           <div className="py-8">
             <div className="flex justify-center items-center gap-3">
-              <button className="flex justify-center items-center gap-2 h-12 rounded-lg text-clade-primary font-semibold bg-orange-50  w-1/2">
+              <button className="w-[140px] flex justify-center items-center gap-2 h-12 rounded-lg text-clade-primary font-semibold bg-orange-50 border-[1px] border-clade-primary">
                 <Trash2 width={24} height={24} strokeWidth={1.25} />
                 Delete Job
               </button>
-              <button className="flex justify-center items-center gap-2 w-1/2 h-12 rounded-lg text-white font-semibold bg-clade-primary">
+              <button className="flex justify-center items-center gap-2 w-[140px] h-12 rounded-lg text-white font-semibold bg-clade-primary border-2 border-clade-border">
                 <Pencil width={22} height={22} strokeWidth={1.25} />
                 Edit Job
               </button>
