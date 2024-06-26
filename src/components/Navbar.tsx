@@ -50,10 +50,9 @@ const Navbar = () => {
         <span className="font-semibold text-xl">techkareer</span>
       </div>
       <div className="hidden md:flex h-16 rounded-full items-center p-2 border-2 gap-4 lg:gap-12">
-        {navItems.map((item, index) => (
-          <Link href={item.href}>
+        {navItems.map((item, unk) => (
+          <Link href={item.href} key={unk}>
             <div
-              key={index}
               className={`h-12 flex gap-1 items-center rounded-full px-3 py-2 cursor-pointer ${
                 pathname === item.href
                   ? "bg-clade-primary text-white border-2 border-clade-border"
@@ -84,23 +83,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* <div className="flex m-auto md:hidden overflow-x-scroll sm:overflow-hidden h-16  sm:justify-center rounded-full items-center p-2 border-2 gap-4">
-        {navItems.map((item, index) => (
-          <Link href={item.href}>
-            <div
-              key={index}
-              className={`h-12 flex gap-1 items-center rounded-full px-3 py-2 cursor-pointer ${
-                pathname === item.href
-                  ? "bg-clade-primary text-white border-2 border-clade-border"
-                  : "bg-transparent text-gray-500"
-              }`}
-            >
-              {item.icon}
-              <span>{item.title}</span>
-            </div>
-          </Link>
-        ))}
-      </div> */}
     </div>
   )
 }

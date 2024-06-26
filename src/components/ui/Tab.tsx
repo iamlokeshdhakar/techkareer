@@ -49,6 +49,7 @@ const Tabs = ({ tabs, content }: TabsProps) => {
             <div
               className="min-w-32 h-full flex justify-center items-center flex-col cursor-pointer"
               onClick={() => setActiveTab(index)}
+              key={index}
             >
               <span
                 className={`h-full flex justify-center items-center ${

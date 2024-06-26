@@ -42,9 +42,9 @@ const JobPreview = () => {
         <div className="flex flex-col gap-2 md:w-52">
           <span className="text-[14px]">Skill Required</span>
           <div className="flex flex-wrap sm:flex-nowrap md:flex-col gap-2">
-            {jobData.skills.map((skill, index) => (
+            {jobData.skills.map((skill, unq) => (
               <div
-                key={index}
+                key={unq}
                 className="flex px-1 py-[2px] border-2 gap-2 rounded-lg w-fit text-[12px] items-center justify-center font-medium"
               >
                 <div className="w-5 h-5 relative rounded-md overflow-hidden">
