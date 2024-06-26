@@ -1,5 +1,6 @@
 "use client"
 import {
+  Bell,
   BellDot,
   Briefcase,
   ChevronDown,
@@ -19,7 +20,12 @@ const navItems = [
   {
     title: "Messages",
     href: "/messages",
-    icon: <MessageSquare width={24} height={24} strokeWidth={1.25} />,
+    icon: (
+      <div className="relative">
+        <MessageSquare width={24} height={24} strokeWidth={1.25} />
+        <div className="w-1 h-1 rounded-full bg-red-700 absolute right-0 top-0"></div>
+      </div>
+    ),
   },
   {
     title: "Payments",
@@ -43,7 +49,7 @@ const Navbar = () => {
         </div>
         <span className="font-semibold text-xl">techkareer</span>
       </div>
-      <div className="hidden md:flex h-16 rounded-full items-center p-2 border-2 gap-4">
+      <div className="hidden md:flex h-16 rounded-full items-center p-2 border-2 gap-4 lg:gap-12">
         {navItems.map((item, index) => (
           <Link href={item.href}>
             <div
@@ -61,9 +67,12 @@ const Navbar = () => {
         ))}
       </div>
       <div className="flex items-center gap-2 sm:gap-6">
-        <BellDot />
+        <div className="relative">
+          <Bell />
+          <div className="w-1 h-1 rounded-full bg-red-700 absolute right-0 top-0"></div>
+        </div>
         <div className="flex items-center  gap-2 cursor-pointer">
-          <div className="w-12 h-12  rounded-full relative">
+          <div className="w-10 h-10  rounded-full relative">
             <Image
               layout="fill"
               src={"/atlassian.png"}
